@@ -1,0 +1,24 @@
+<table>
+  <tr>
+    <th>CODIGO DE USUARIO</th>
+    <th>CUENTA DE USUARIO</th>
+    <th>NOMBRE DE USUARIO</th>
+    <th>CONTRASEÑA DE USUARIO</th>
+    <th>CODIGO DE PERFIL</th>
+    <th>NOMBRE DE PERFIL</th>
+    <th>INDICADOR DE PERFIL</th>
+    <th>CODIGO DE APLICACION</th>
+    <th>NOMBRE DE APLICACION</th>
+  </tr>
+  <tr *ngFor="let item of lista">
+    <td>{{item.codigoUsr}}</td>
+    <td>{{item.cuentaUsr}}</td>
+    <td>{{item.nombreUsr}}</td>
+    <td>{{item.passUsr}}</td>
+    <td>{{item.codigoPerfil}}</td>
+    <td>{{item.nombrePerfil}}</td>
+    <td>{{item. indicadorPerfil}}</td>
+    <td>{{item.codigoApp}}</td>
+    <td>{{item.nombreApp}}</td>
+  </tr>
+</table>
