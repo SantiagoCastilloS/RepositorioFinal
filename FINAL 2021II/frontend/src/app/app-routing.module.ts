@@ -5,7 +5,7 @@ import {RegistrarComponent} from "./registrar/registrar.component";
 import {ActualizarComponent} from "./actualizar/actualizar.component";
 
 const routes: Routes = [
-  {path:"reporte", component: ReporteComponent},
+  {path:"", component: ReporteComponent},
   {path:"registrar", component: RegistrarComponent},
   {path:"actualizar", component: ActualizarComponent}
 ];

@@ -8,11 +8,28 @@ import {Perfil} from "../../interfaces";
   styleUrls: ['./actualizar.component.scss']
 })
 export class ActualizarComponent implements OnInit {
-  perfil: Perfil = {} as Perfil;
+  codigoPerfil: string="";
+  indicadorPerfil: string="";
+  mensaje: string = "";
+
   constructor(private api: ApiService) { }
+
   ngOnInit(): void {
   }
-  actualizar() {
-    this.api.actualizarIndicadorPerfil(this.perfil).subscribe(retorno=>console.log(retorno.codigoPerfil + " .. REGISTRADO CORRECTAMENTE"));
+
+  actualizar(): void {
+    console.log(this.codigoPerfil);
+    console.log(this.indicadorPerfil);
+
+    const perfil: Perfil = {
+      codigoPerfil: this.codigoPerfil,
+      indicadorPerfil: this.indicadorPerfil
+    }
+
+    this.api.actualizarIndicadorPerfil(perfil).subscribe(retorno => {
+      this.mensaje = "El indicardor del codigo:  " + retorno.codigoPerfil + " fue actualizado " +
+        "correctamente al valor: "+retorno.indicadorPerfil;
+      console.log(this.mensaje)
+    })
   }
 }

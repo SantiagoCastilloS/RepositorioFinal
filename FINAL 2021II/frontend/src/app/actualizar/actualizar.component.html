@@ -1,6 +1,13 @@
-<h1>ACTUALIZAR PERFIL</h1>
-<div>
-  <label>CODIGO DE PERFIL</label>
-  <input type="text" name="codigoTabla" [ngModel]="perfil.codigoPerfil">
-</div>
-<button (click)="actualizar()">ACTUALIZAR</button>
+<section class="w-3/5 mx-auto bg-yellow-200 shadow-2xl rounded px-10 px-20">
+  <h1 class="text-7xl">Actualizar indicador de perfil</h1>
+  <label class="text-lg">codigo de perfil</label>
+  <div>
+    <input type="text"  name="codigoPerfil" [(ngModel)]="codigoPerfil">
+  </div>
+
+  <label class="text-lg">indicador de perfil </label>
+  <div>
+    <input type="text"  name="indicadorPerfil" [(ngModel)]="indicadorPerfil">
+  </div>
+  <button  (click)="actualizar()">Actualizar</button>
+</section>

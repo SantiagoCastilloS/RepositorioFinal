@@ -8,13 +8,27 @@ import {Aplicacion} from "../../interfaces";
   styleUrls: ['./registrar.component.scss']
 })
 export class RegistrarComponent implements OnInit {
-  aplicacion: Aplicacion = {} as Aplicacion;
-  constructor(private api:ApiService) { }
+  codigoApp: string="";
+  nombreApp: string="";
+  mensaje: string = "";
+
+  constructor(private api: ApiService) { }
 
   ngOnInit(): void {
   }
 
-  registrar() {
-    this.api.registrarAplicacion(this.aplicacion).subscribe(retorno=>console.log(retorno.codigoApp + " .. REGISTRADO CORRECTAMENTE"));
+  registrar(): void {
+    console.log(this.codigoApp);
+    console.log(this.nombreApp);
+
+    const aplicacion: Aplicacion = {
+      codigoApp: this.codigoApp,
+      nombreApp: this.nombreApp
+    }
+
+    this.api.registrarAplicacion(aplicacion).subscribe(retorno => {
+      this.mensaje = "La aplicacion " + retorno.codigoApp + " fue registrada correctamente en el catalogo";
+      console.log(this.mensaje)
+    })
   }
 }

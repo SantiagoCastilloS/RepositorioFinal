@@ -4,7 +4,7 @@ export interface Consulta{
    nombreUsr: string;
    passUsr: string;
    codigoPerfil: string;
-   nombrePerfi: string;
+   nombrePerfil: string;
    indicadorPerfil: number;
    codigoApp: string;
    nombreApp: string;
@@ -20,6 +20,7 @@ export interface Aplicacion{
   nombreApp: string;
 }
 
-export interface Perfil{
+export interface Perfil {
   codigoPerfil: string;
+  indicadorPerfil: string;
 }
