@@ -58,7 +58,7 @@ public class ConsultaDaoImp implements ConsultaDao {
     public Aplicacion registrarAplicacion(Aplicacion aplicacion) {
         try{
             obtenerConexion();
-            String sql = "INSERT INTO aplicacion VALUES(?, ?);";
+            String sql = "INSERT INTO aplicacion (codigo_app, nombre_app) VALUES (?, ?);";
             PreparedStatement st = conexion.prepareStatement(sql);
             st.setString(1, aplicacion.getCodigoApp());
             st.setString(2, aplicacion.getNombreApp());

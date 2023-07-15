@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 public class Perfil {
     private String codigoPerfil;
     private String nombrePerfil;
-    private char indicador;
+    private String indicadorPerfil;
 }
