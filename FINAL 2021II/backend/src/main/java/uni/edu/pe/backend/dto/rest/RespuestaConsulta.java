@@ -1,2 +1,14 @@
-package uni.edu.pe.backend.dto.rest;public class RespuestaConsulta {
+package uni.edu.pe.backend.dto.rest;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import uni.edu.pe.backend.dto.Consulta;
+
+import java.util.List;
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class RespuestaConsulta {
+    private List<Consulta> consultas;
 }
