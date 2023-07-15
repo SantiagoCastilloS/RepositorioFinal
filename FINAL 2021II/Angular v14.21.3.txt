@@ -1,0 +1,16 @@
+verificar version angular
+instalar https://github.com/coreybutler/nvm-windows
+nvm install 14.21.3
+nvm list
+nvm current 
+nvm use 14.21.3
+node -v npm install -g @angular/cli@12.x.x
+ng version
+cd "ruta"
+ng new "aplicacion"
+ng generate component nombre
+npm install tailwindcss
+npx tailwindcss init
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
